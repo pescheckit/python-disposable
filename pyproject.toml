@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "disposable-email-check"
+name = "python-disposable"
 dynamic = ["version"]
 description = "Check if an email address or domain belongs to a disposable/temporary email service. Bundles 72k+ domains from disposable/disposable-email-domains."
 readme = "README.md"
@@ -45,5 +45,6 @@ packages = ["disposable_email"]
 include = [
     "disposable_email/",
     "README.md",
+    "LICENSE",
     "pyproject.toml",
 ]
