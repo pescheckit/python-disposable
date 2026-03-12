@@ -1,7 +1,10 @@
-from importlib.resources import files
+from __future__ import annotations
 
-_domains: frozenset[str] | None = None
-_domains_strict: frozenset[str] | None = None
+from importlib.resources import files
+from typing import Optional
+
+_domains: Optional[frozenset[str]] = None
+_domains_strict: Optional[frozenset[str]] = None
 
 
 def _load(strict: bool = False) -> frozenset[str]:
