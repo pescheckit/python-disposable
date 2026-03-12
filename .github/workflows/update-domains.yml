@@ -1,0 +1,56 @@
+name: Update Domain Lists
+
+on:
+  schedule:
+    - cron: "0 11 * * *"  # Every day at 11:00 UTC (12:00 Amsterdam/CET)
+  workflow_dispatch:       # Allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download latest domain lists
+        run: |
+          curl -sL https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains.txt \
+            -o disposable_email/domains.txt
+          curl -sL https://raw.githubusercontent.com/disposable/disposable-email-domains/master/domains_strict.txt \
+            -o disposable_email/domains_strict.txt
+
+      - name: Check for changes
+        id: changes
+        run: |
+          DATE=$(TZ="Europe/Amsterdam" date "+%d-%m-%Y")
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+          if git diff --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            NORMAL=$(wc -l < disposable_email/domains.txt)
+            STRICT=$(wc -l < disposable_email/domains_strict.txt)
+            echo "changed=true" >> $GITHUB_OUTPUT
+            echo "normal_count=$NORMAL" >> $GITHUB_OUTPUT
+            echo "strict_count=$STRICT" >> $GITHUB_OUTPUT
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update domain list ${{ steps.changes.outputs.date }}"
+          branch: "chore/update-domains-${{ steps.changes.outputs.date }}"
+          delete-branch: true
+          title: "chore: update domain list ${{ steps.changes.outputs.date }}"
+          body: |
+            Automated daily update of bundled domain lists from [disposable/disposable-email-domains](https://github.com/disposable/disposable-email-domains).
+
+            | List | Domains |
+            |------|---------|
+            | `domains.txt` | ${{ steps.changes.outputs.normal_count }} |
+            | `domains_strict.txt` | ${{ steps.changes.outputs.strict_count }} |
+
+            Merge this PR to include the latest domains in the next release.
+          labels: "automated,domains"
