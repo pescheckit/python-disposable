@@ -9,6 +9,9 @@ description = "Check if an email address or domain belongs to a disposable/tempo
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
 keywords = ["email", "disposable", "validation", "spam"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
