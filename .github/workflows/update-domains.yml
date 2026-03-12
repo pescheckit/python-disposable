@@ -35,6 +35,7 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "normal_count=$NORMAL" >> $GITHUB_OUTPUT
             echo "strict_count=$STRICT" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create pull request
         if: steps.changes.outputs.changed == 'true'
