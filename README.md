@@ -1,4 +1,4 @@
-# disposable-email-check
+# python-disposable
 
 A Python package to check if an email address or domain belongs to a disposable/temporary email service.
 
