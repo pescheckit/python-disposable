@@ -7,7 +7,7 @@ Bundles **72,000+ domains** from [disposable/disposable-email-domains](https://g
 ## Installation
 
 ```bash
-pip install disposable-email-check
+pip install python-disposable
 ```
 
 ## Usage
