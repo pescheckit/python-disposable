@@ -27,7 +27,9 @@ classifiers = [
 test = ["pytest>=7"]
 
 [project.urls]
-"Source" = "https://github.com/disposable/disposable-email-domains"
+"Homepage" = "https://github.com/pescheckit/python-disposable"
+"Source" = "https://github.com/pescheckit/python-disposable"
+"Issues" = "https://github.com/pescheckit/python-disposable/issues"
 
 [tool.hatch.version]
 source = "vcs"

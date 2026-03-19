@@ -90,7 +90,7 @@ class RegisterForm(forms.Form):
 
 Domain lists are sourced from [disposable/disposable-email-domains](https://github.com/disposable/disposable-email-domains) and bundled at release time. The upstream list is updated daily via automated scraping of 40+ sources.
 
-This package checks for upstream updates daily and opens a pull request automatically when new domains are available.
+This package checks for upstream updates every 4 hours and automatically publishes a new version to PyPI when changes are detected.
 
 ## License
 
