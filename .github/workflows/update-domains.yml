@@ -2,7 +2,7 @@ name: Update Domain Lists
 
 on:
   schedule:
-    - cron: "0 11 * * *"  # Every day at 11:00 UTC (12:00 Amsterdam/CET)
+    - cron: "0 */4 * * *"  # Every 4 hours
   workflow_dispatch:       # Allow manual trigger
 
 jobs:
