@@ -40,6 +40,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # Need full history for hatch-vcs version
 
       - name: Set up Python
         uses: actions/setup-python@v6

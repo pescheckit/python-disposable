@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # Need full history for hatch-vcs and tag detection
 
       - name: Download latest domain lists
         run: |
@@ -25,33 +26,63 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          DATE=$(TZ="Europe/Amsterdam" date "+%d-%m-%Y")
-          echo "date=$DATE" >> $GITHUB_OUTPUT
           if git diff --quiet; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
-            NORMAL=$(wc -l < disposable_email/domains.txt)
-            STRICT=$(wc -l < disposable_email/domains_strict.txt)
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "normal_count=$NORMAL" >> $GITHUB_OUTPUT
-            echo "strict_count=$STRICT" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create pull request
+      - name: Set up Python
         if: steps.changes.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: actions/setup-python@v6
         with:
-          commit-message: "chore: update domain list ${{ steps.changes.outputs.date }}"
-          branch: "chore/update-domains-${{ steps.changes.outputs.date }}"
-          delete-branch: true
-          title: "chore: update domain list ${{ steps.changes.outputs.date }}"
-          body: |
-            Automated daily update of bundled domain lists from [disposable/disposable-email-domains](https://github.com/disposable/disposable-email-domains).
+          python-version: "3.12"
 
-            | List | Domains |
-            |------|---------|
-            | `domains.txt` | ${{ steps.changes.outputs.normal_count }} |
-            | `domains_strict.txt` | ${{ steps.changes.outputs.strict_count }} |
+      - name: Install and test
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          pip install -e ".[test]"
+          pytest tests/ -v
 
-            Merge this PR to include the latest domains in the next release.
-          labels: "automated,domains"
+      - name: Commit, tag, and release
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          DATE=$(TZ="Europe/Amsterdam" date "+%d-%m-%Y")
+          NORMAL=$(wc -l < disposable_email/domains.txt)
+          STRICT=$(wc -l < disposable_email/domains_strict.txt)
+
+          # Determine next patch version
+          LATEST_TAG=$(git tag --sort=-v:refname | head -1)
+          if [ -z "$LATEST_TAG" ]; then
+            NEXT_TAG="0.0.1"
+          else
+            MAJOR=$(echo "$LATEST_TAG" | cut -d. -f1)
+            MINOR=$(echo "$LATEST_TAG" | cut -d. -f2)
+            PATCH=$(echo "$LATEST_TAG" | cut -d. -f3)
+            NEXT_TAG="${MAJOR}.${MINOR}.$((PATCH + 1))"
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add disposable_email/domains.txt disposable_email/domains_strict.txt
+          git commit -m "chore: update domain list ${DATE}"
+          git tag "$NEXT_TAG"
+          git push origin main --tags
+
+      - name: Create GitHub release
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEXT_TAG=$(git tag --sort=-v:refname | head -1)
+          NORMAL=$(wc -l < disposable_email/domains.txt)
+          STRICT=$(wc -l < disposable_email/domains_strict.txt)
+
+          gh release create "$NEXT_TAG" \
+            --title "$NEXT_TAG" \
+            --notes "Automated domain list update.
+
+          | List | Domains |
+          |------|---------|
+          | \`domains.txt\` | ${NORMAL} |
+          | \`domains_strict.txt\` | ${STRICT} |"
