@@ -7,17 +7,23 @@ _domains: Optional[frozenset[str]] = None
 _domains_strict: Optional[frozenset[str]] = None
 
 
+def _load_custom() -> frozenset[str]:
+    data = files("disposable_email").joinpath("domains_custom.txt").read_text(encoding="utf-8")
+    return frozenset(line.strip().lower() for line in data.splitlines() if line.strip())
+
+
 def _load(strict: bool = False) -> frozenset[str]:
     global _domains, _domains_strict
+    custom = _load_custom()
     if strict:
         if _domains_strict is None:
             data = files("disposable_email").joinpath("domains_strict.txt").read_text(encoding="utf-8")
-            _domains_strict = frozenset(line.strip().lower() for line in data.splitlines() if line.strip())
+            _domains_strict = frozenset(line.strip().lower() for line in data.splitlines() if line.strip()) | custom
         return _domains_strict
     else:
         if _domains is None:
             data = files("disposable_email").joinpath("domains.txt").read_text(encoding="utf-8")
-            _domains = frozenset(line.strip().lower() for line in data.splitlines() if line.strip())
+            _domains = frozenset(line.strip().lower() for line in data.splitlines() if line.strip()) | custom
         return _domains
 
 
