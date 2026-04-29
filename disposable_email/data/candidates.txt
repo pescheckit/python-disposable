@@ -1,0 +1,13 @@
+# Candidate domains discovered from Certificate Transparency logs.
+# These are NOT yet on the disposable list — infer_candidates.py
+# resolves each, checks for MX/IP cluster overlap with known
+# disposable infrastructure, and promotes hits to domains_inferred.txt.
+# Source: crt.sh keyword queries.
+mail.calypsostbarth.com
+temp-mail---slasshy.pages.dev
+temp-mail--temp-mail-129b6.asia-east1.hosted.app
+temp-mail-1--temp-mail-129b6.asia-east1.hosted.app
+tempmail--studio-1074363942-d692e.us-central1.hosted.app
+tempmail--tempemail-f8959.us-east4.hosted.app
+tempmail--tempmail-8f1e2.asia-southeast1.hosted.app
+tempmail-1--tempmail-8f1e2.asia-southeast1.hosted.app

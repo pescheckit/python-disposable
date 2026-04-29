@@ -25,6 +25,9 @@ classifiers = [
 
 [project.optional-dependencies]
 test = ["pytest>=7"]
+osint = [
+    "dnspython>=2.4",
+]
 
 [project.urls]
 "Homepage" = "https://github.com/pescheckit/python-disposable"
@@ -39,14 +42,23 @@ version-file = "disposable_email/_version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["disposable_email"]
-
-[tool.hatch.build.targets.wheel.sources]
-"disposable_email" = "disposable_email"
+# Ship code + the small text data files; exclude the OSINT working artifacts
+# (multi-MB SQLite, intermediate candidates) — those stay in the repo for
+# transparency but bloat the wheel for end users who only need the lookup API.
+exclude = [
+    "disposable_email/data/resolution.sqlite",
+    "disposable_email/data/candidates.txt",
+]
 
 [tool.hatch.build.targets.sdist]
 include = [
     "disposable_email/",
+    "scripts/",
+    "docs/",
     "README.md",
     "LICENSE",
     "pyproject.toml",
+]
+exclude = [
+    "disposable_email/data/resolution.sqlite",
 ]

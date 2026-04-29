@@ -1,0 +1,97 @@
+# Shared mail infrastructure — MX hostname suffixes to EXCLUDE from
+# disposable-cluster classification.
+#
+# Domains pointing to these MX hosts are NOT to be flagged as disposable
+# based on infrastructure overlap, because legitimate users of these
+# providers vastly outnumber any disposable services that share the
+# infrastructure.
+#
+# Format: one suffix per line. A resolved MX hostname matches if it
+# ends with this suffix (case-insensitive, trailing dot stripped).
+# Lines starting with # are comments. Blank lines are ignored.
+#
+# Add entries here, NOT to per-script code. The `clusters` build reads this.
+
+# === Cloudflare Email Routing ===
+mx.cloudflare.net
+
+# === Google Workspace / Gmail / Google Apps ===
+aspmx.l.google.com
+googlemail.com
+google.com
+gmail-smtp-in.l.google.com
+
+# === Microsoft 365 / Outlook / Office 365 ===
+protection.outlook.com
+mail.protection.outlook.com
+outlook.com
+hotmail.com
+
+# === Yahoo ===
+yahoodns.net
+yahoo.com
+yahoomail.com
+
+# === Apple iCloud ===
+icloud.com
+mail.icloud.com
+
+# === Zoho Mail ===
+zohomail.com
+zohomail.eu
+zoho.com
+
+# === ProtonMail ===
+protonmail.ch
+proton.me
+
+# === Yandex ===
+yandex.net
+yandex.com
+yandex.ru
+
+# === Mail.ru ===
+mxs.mail.ru
+mail.ru
+
+# === Forwarding services (used heavily by small businesses) ===
+improvmx.com
+forwardemail.net
+migadu.com
+
+# === Fastmail ===
+messagingengine.com
+fastmail.com
+
+# === Transactional/sending providers (some accept inbound) ===
+mailgun.org
+sendgrid.net
+postmarkapp.com
+amazonses.com
+
+# === GMX / 1&1 / IONOS ===
+kundenserver.de
+1and1.com
+ionos.com
+
+# === OVH mail ===
+mail.ovh.net
+
+# === Hosting-provider default mail (mixed legitimate use) ===
+secureserver.net
+mailspamprotection.com
+emailsrvr.com
+
+# === Registrar email-forwarding services (heavy legitimate use) ===
+registrar-servers.com
+above.com
+namecheaphosting.com
+porkbun.com
+
+# === MXroute (small-business mail host) ===
+mxroute.com
+
+# === Tutanota ===
+tutanota.de
+tutanota.com
+tutamail.com

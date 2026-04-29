@@ -1,0 +1,79 @@
+name: Nightly OSINT
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # 02:00 UTC daily
+  workflow_dispatch:
+
+# Allow only one OSINT run at a time; cancel queued duplicates.
+concurrency:
+  group: nightly-osint
+  cancel-in-progress: false
+
+jobs:
+  osint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install OSINT and test dependencies
+        run: pip install -e ".[osint,test]"
+
+      - name: Run test suite (gate before any data work)
+        run: pytest tests/ -v
+
+      - name: Resolve upstream disposable domains
+        run: python scripts/resolve_domains.py --max-age-days 7
+
+      - name: Fetch candidate domains from CT logs (crt.sh keyword search)
+        run: python scripts/fetch_ct_candidates.py
+        continue-on-error: true   # crt.sh outages should not break the pipeline
+
+      - name: Resolve candidate domains
+        run: |
+          if [ -f disposable_email/data/candidates.txt ]; then
+            python scripts/resolve_domains.py \
+              --domains disposable_email/data/candidates.txt \
+              --max-age-days 7
+          else
+            echo "No candidates file yet; skipping candidate resolution."
+          fi
+
+      - name: Build MX/IP cluster tables
+        run: python scripts/build_clusters.py
+
+      - name: Promote candidates to inferred list
+        run: python scripts/infer_candidates.py
+
+      - name: Regenerate docs/statistics.md
+        run: python scripts/generate_stats.py
+
+      - name: Re-run tests after data update (catch inferred-list regressions)
+        run: pytest tests/ -v
+
+      - name: Commit OSINT artifacts
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add disposable_email/data/resolution.sqlite \
+                  disposable_email/data/candidates.txt \
+                  disposable_email/domains_inferred.txt \
+                  docs/statistics.md \
+                  || true
+          if git diff --cached --quiet; then
+            echo "No OSINT changes to commit."
+          else
+            git commit -m "chore: nightly OSINT update $(date -u '+%Y-%m-%d')"
+            git push origin HEAD:main
+          fi
