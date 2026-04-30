@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-04-29 11:51 UTC**.*  
-*Last DNS snapshot: **2026-04-29T11:51:53+00:00**.*
+*Generated automatically. Last build: **2026-04-30 03:18 UTC**.*  
+*Last DNS snapshot: **2026-04-30T03:18:00+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -12,21 +12,21 @@ It captures the live mail infrastructure of the disposable email domains shipped
 |---|---|
 | `domains.txt` (default) | 72,167 |
 | `domains_strict.txt` | 72,198 |
-| `domains_inferred.txt` (opt-in) | 0 |
+| `domains_inferred.txt` (opt-in) | 2 |
 
 ## Reachability
 
-Of **72,175** resolved domains:
+Of **72,183** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 22,360 | 31.0% |
-| A_ONLY | 5,737 | 7.9% |
-| NXDOMAIN | 42,515 | 58.9% |
+| MX_OK | 22,362 | 31.0% |
+| A_ONLY | 5,738 | 7.9% |
+| NXDOMAIN | 42,518 | 58.9% |
 | NO_RECORDS | 750 | 1.0% |
-| TIMEOUT | 813 | 1.1% |
+| TIMEOUT | 815 | 1.1% |
 
-**28,097 domains are mail-reachable today** (38.9%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**28,100 domains are mail-reachable today** (38.9%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -114,7 +114,7 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 |---|---|
 | High-confidence disposable MX hosts (≥5 disposables, not shared) | 306 |
 | High-confidence disposable IPs | 789 |
-| Promoted to `domains_inferred.txt` | 0 |
+| Promoted to `domains_inferred.txt` | 2 |
 
 
 A candidate domain (sourced from Certificate Transparency logs) is promoted to `domains_inferred.txt` when its MX or IP intersects with one of the high-confidence disposable clusters above.
