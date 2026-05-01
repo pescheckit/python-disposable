@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-04-30 03:18 UTC**.*  
-*Last DNS snapshot: **2026-04-30T03:18:00+00:00**.*
+*Generated automatically. Last build: **2026-05-01 03:22 UTC**.*  
+*Last DNS snapshot: **2026-05-01T03:09:23+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 72,167 |
-| `domains_strict.txt` | 72,198 |
+| `domains.txt` (default) | 72,180 |
+| `domains_strict.txt` | 72,211 |
 | `domains_inferred.txt` (opt-in) | 2 |
 
 ## Reachability
 
-Of **72,183** resolved domains:
+Of **72,228** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 22,362 | 31.0% |
+| MX_OK | 22,407 | 31.0% |
 | A_ONLY | 5,738 | 7.9% |
 | NXDOMAIN | 42,518 | 58.9% |
 | NO_RECORDS | 750 | 1.0% |
 | TIMEOUT | 815 | 1.1% |
 
-**28,100 domains are mail-reachable today** (38.9%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**28,145 domains are mail-reachable today** (39.0%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -34,11 +34,11 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 
 | MX host | Disposable domains | Total resolved | Shared infra |
 |---|---|---|---|
-| `mail.wabblywabble.com` | 1565 | 1565 |  |
-| `mail.wallywatts.com` | 1565 | 1565 |  |
+| `mail.wabblywabble.com` | 1563 | 1565 |  |
+| `mail.wallywatts.com` | 1563 | 1565 |  |
 | `mx4.beavis99.com` | 1005 | 1005 |  |
 | `mx4.beavis99.net` | 1004 | 1004 |  |
-| `generator.email` | 815 | 815 |  |
+| `generator.email` | 834 | 844 |  |
 | `route2.mx.cloudflare.net` | 788 | 788 | yes |
 | `route1.mx.cloudflare.net` | 787 | 787 | yes |
 | `route3.mx.cloudflare.net` | 787 | 787 | yes |
@@ -48,8 +48,8 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `srv4.unstablemail.com` | 476 | 476 |  |
 | `aspmx.l.google.com` | 463 | 463 | yes |
 | `alt1.aspmx.l.google.com` | 454 | 454 | yes |
+| `emailfake.com` | 453 | 461 |  |
 | `alt2.aspmx.l.google.com` | 450 | 450 | yes |
-| `emailfake.com` | 450 | 450 |  |
 | `mx.spymail.one` | 389 | 389 |  |
 | `mx.emltmp.com` | 377 | 377 |  |
 | `eforward1.registrar-servers.com` | 368 | 368 | yes |
@@ -60,15 +60,15 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 
 | MX host | Disposable domains | Total resolved |
 |---|---|---|
-| `mail.wabblywabble.com` | 1565 | 1565 |
-| `mail.wallywatts.com` | 1565 | 1565 |
+| `mail.wabblywabble.com` | 1563 | 1565 |
+| `mail.wallywatts.com` | 1563 | 1565 |
 | `mx4.beavis99.com` | 1005 | 1005 |
 | `mx4.beavis99.net` | 1004 | 1004 |
-| `generator.email` | 815 | 815 |
+| `generator.email` | 834 | 844 |
 | `mx.emlhub.com` | 493 | 493 |
 | `aero4.unstablemail.com` | 477 | 477 |
 | `srv4.unstablemail.com` | 476 | 476 |
-| `emailfake.com` | 450 | 450 |
+| `emailfake.com` | 453 | 461 |
 | `mx.spymail.one` | 389 | 389 |
 | `mx.emltmp.com` | 377 | 377 |
 | `mx.emlpro.com` | 364 | 364 |
@@ -88,11 +88,11 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 |---|---|---|
 | `78.47.124.133` | 2753 | 2753 |
 | `94.130.108.80` | 2753 | 2753 |
-| `116.202.9.167` | 1564 | 1564 |
-| `46.101.111.206` | 1564 | 1564 |
-| `142.132.166.12` | 1563 | 1563 |
-| `188.166.111.252` | 1563 | 1563 |
-| `91.196.52.205` | 1411 | 1411 |
+| `116.202.9.167` | 1562 | 1564 |
+| `46.101.111.206` | 1562 | 1564 |
+| `142.132.166.12` | 1561 | 1563 |
+| `188.166.111.252` | 1561 | 1563 |
+| `91.196.52.205` | 1433 | 1453 |
 | `13.223.25.84` | 1168 | 1168 |
 | `54.243.117.197` | 1168 | 1168 |
 | `188.245.74.208` | 1004 | 1004 |
