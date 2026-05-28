@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-05-27 03:35 UTC**.*  
-*Last DNS snapshot: **2026-05-27T03:12:08+00:00**.*
+*Generated automatically. Last build: **2026-05-28 03:32 UTC**.*  
+*Last DNS snapshot: **2026-05-28T03:13:11+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 72,247 |
-| `domains_strict.txt` | 72,278 |
+| `domains.txt` (default) | 72,317 |
+| `domains_strict.txt` | 72,348 |
 | `domains_inferred.txt` (opt-in) | 1 |
 
 ## Reachability
 
-Of **72,684** resolved domains:
+Of **72,689** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 10,763 | 14.8% |
+| MX_OK | 10,767 | 14.8% |
 | A_ONLY | 1,645 | 2.3% |
-| NXDOMAIN | 19,792 | 27.2% |
+| NXDOMAIN | 19,793 | 27.2% |
 | NO_RECORDS | 243 | 0.3% |
 | TIMEOUT | 40,241 | 55.4% |
 
-**12,408 domains are mail-reachable today** (17.1%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**12,412 domains are mail-reachable today** (17.1%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -38,13 +38,13 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `mail.wallywatts.com` | 691 | 704 |  |
 | `mx4.beavis99.com` | 490 | 490 |  |
 | `mx4.beavis99.net` | 490 | 490 |  |
-| `generator.email` | 412 | 551 |  |
+| `generator.email` | 443 | 554 |  |
 | `route1.mx.cloudflare.net` | 368 | 372 | yes |
 | `route2.mx.cloudflare.net` | 368 | 372 | yes |
 | `route3.mx.cloudflare.net` | 368 | 372 | yes |
 | `park-mx.above.com` | 278 | 279 | yes |
 | `mx.emlhub.com` | 264 | 264 |  |
-| `emailfake.com` | 230 | 281 |  |
+| `emailfake.com` | 254 | 282 |  |
 | `aspmx.l.google.com` | 227 | 227 | yes |
 | `alt1.aspmx.l.google.com` | 220 | 220 | yes |
 | `alt2.aspmx.l.google.com` | 218 | 218 | yes |
@@ -64,9 +64,9 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `mail.wallywatts.com` | 691 | 704 |
 | `mx4.beavis99.com` | 490 | 490 |
 | `mx4.beavis99.net` | 490 | 490 |
-| `generator.email` | 412 | 551 |
+| `generator.email` | 443 | 554 |
 | `mx.emlhub.com` | 264 | 264 |
-| `emailfake.com` | 230 | 281 |
+| `emailfake.com` | 254 | 282 |
 | `aero4.unstablemail.com` | 198 | 198 |
 | `srv4.unstablemail.com` | 198 | 198 |
 | `mx.emlpro.com` | 169 | 169 |
@@ -88,7 +88,7 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 |---|---|---|
 | `78.47.124.133` | 820 | 820 |
 | `94.130.108.80` | 820 | 820 |
-| `91.196.52.205` | 494 | 681 |
+| `91.196.52.205` | 545 | 685 |
 | `142.132.166.12` | 486 | 499 |
 | `188.166.111.252` | 486 | 499 |
 | `116.202.9.167` | 471 | 483 |
