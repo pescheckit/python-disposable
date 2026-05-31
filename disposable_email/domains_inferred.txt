@@ -6,9 +6,8 @@
 # allowlist (Cloudflare Email Routing, Google Workspace, etc.).
 #
 # Source: scripts/infer_candidates.py
-# Last updated: 2026-05-30T03:23:43+00:00
-# Count: 1
+# Last updated: 2026-05-31T04:45:22+00:00
+# Count: 0
 #
 # Use via:  is_disposable("x@example.com", inferred=True)
 
-labdisposable.com
