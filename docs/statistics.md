@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-06-18 03:28 UTC**.*  
-*Last DNS snapshot: **2026-06-18T03:12:07+00:00**.*
+*Generated automatically. Last build: **2026-06-19 03:25 UTC**.*  
+*Last DNS snapshot: **2026-06-19T03:13:16+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 73,765 |
-| `domains_strict.txt` | 73,796 |
+| `domains.txt` (default) | 73,800 |
+| `domains_strict.txt` | 73,831 |
 | `domains_inferred.txt` (opt-in) | 2 |
 
 ## Reachability
 
-Of **74,251** resolved domains:
+Of **74,265** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 21,889 | 29.5% |
-| A_ONLY | 5,150 | 6.9% |
-| NXDOMAIN | 39,581 | 53.3% |
-| NO_RECORDS | 690 | 0.9% |
-| TIMEOUT | 6,941 | 9.3% |
+| MX_OK | 21,896 | 29.5% |
+| A_ONLY | 5,151 | 6.9% |
+| NXDOMAIN | 39,573 | 53.3% |
+| NO_RECORDS | 692 | 0.9% |
+| TIMEOUT | 6,953 | 9.4% |
 
-**27,039 domains are mail-reachable today** (36.4%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**27,047 domains are mail-reachable today** (36.4%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -38,16 +38,16 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `mail.wallywatts.com` | 1345 | 1368 |  |
 | `mx4.beavis99.com` | 984 | 985 |  |
 | `mx4.beavis99.net` | 983 | 984 |  |
-| `generator.email` | 804 | 944 |  |
-| `route1.mx.cloudflare.net` | 784 | 791 | yes |
-| `route2.mx.cloudflare.net` | 784 | 791 | yes |
-| `route3.mx.cloudflare.net` | 782 | 789 | yes |
+| `generator.email` | 818 | 947 |  |
+| `route1.mx.cloudflare.net` | 787 | 794 | yes |
+| `route2.mx.cloudflare.net` | 787 | 794 | yes |
+| `route3.mx.cloudflare.net` | 785 | 792 | yes |
 | `park-mx.above.com` | 620 | 621 | yes |
 | `mx.emlhub.com` | 462 | 462 |  |
-| `aspmx.l.google.com` | 443 | 444 | yes |
-| `alt1.aspmx.l.google.com` | 434 | 435 | yes |
-| `alt2.aspmx.l.google.com` | 430 | 431 | yes |
-| `emailfake.com` | 427 | 466 |  |
+| `aspmx.l.google.com` | 440 | 441 | yes |
+| `emailfake.com` | 439 | 473 |  |
+| `alt1.aspmx.l.google.com` | 431 | 432 | yes |
+| `alt2.aspmx.l.google.com` | 427 | 428 | yes |
 | `aero4.unstablemail.com` | 423 | 423 |  |
 | `srv4.unstablemail.com` | 422 | 422 |  |
 | `mx.emltmp.com` | 354 | 354 |  |
@@ -64,9 +64,9 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `mail.wallywatts.com` | 1345 | 1368 |
 | `mx4.beavis99.com` | 984 | 985 |
 | `mx4.beavis99.net` | 983 | 984 |
-| `generator.email` | 804 | 944 |
+| `generator.email` | 818 | 947 |
 | `mx.emlhub.com` | 462 | 462 |
-| `emailfake.com` | 427 | 466 |
+| `emailfake.com` | 439 | 473 |
 | `aero4.unstablemail.com` | 423 | 423 |
 | `srv4.unstablemail.com` | 422 | 422 |
 | `mx.emltmp.com` | 354 | 354 |
@@ -90,22 +90,22 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `94.130.108.80` | 2475 | 2475 |
 | `116.202.9.167` | 1333 | 1352 |
 | `46.101.111.206` | 1333 | 1352 |
+| `91.196.52.205` | 1328 | 1494 |
 | `142.132.166.12` | 1319 | 1339 |
 | `188.166.111.252` | 1319 | 1339 |
-| `91.196.52.205` | 1303 | 1485 |
 | `13.223.25.84` | 1066 | 1066 |
 | `54.243.117.197` | 1066 | 1066 |
 | `188.245.74.208` | 965 | 966 |
 | `195.201.18.63` | 950 | 951 |
-| `162.159.205.17` | 798 | 804 |
-| `162.159.205.18` | 798 | 804 |
-| `162.159.205.19` | 798 | 804 |
-| `162.159.205.23` | 796 | 802 |
-| `162.159.205.24` | 796 | 802 |
-| `162.159.205.25` | 796 | 802 |
-| `162.159.205.11` | 794 | 800 |
-| `162.159.205.12` | 794 | 800 |
-| `162.159.205.13` | 794 | 800 |
+| `162.159.205.17` | 801 | 807 |
+| `162.159.205.18` | 801 | 807 |
+| `162.159.205.19` | 801 | 807 |
+| `162.159.205.23` | 799 | 805 |
+| `162.159.205.24` | 799 | 805 |
+| `162.159.205.25` | 799 | 805 |
+| `162.159.205.11` | 797 | 803 |
+| `162.159.205.12` | 797 | 803 |
+| `162.159.205.13` | 797 | 803 |
 
 
 ## Inferred candidates pipeline
