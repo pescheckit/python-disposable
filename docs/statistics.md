@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-08-05 03:21 UTC**.*  
-*Last DNS snapshot: **2026-08-05T03:04:55+00:00**.*
+*Generated automatically. Last build: **2026-08-06 03:18 UTC**.*  
+*Last DNS snapshot: **2026-08-06T03:05:29+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -16,17 +16,17 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 ## Reachability
 
-Of **75,464** resolved domains:
+Of **75,470** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 11,834 | 15.7% |
+| MX_OK | 11,840 | 15.7% |
 | A_ONLY | 1,947 | 2.6% |
 | NXDOMAIN | 20,855 | 27.6% |
 | NO_RECORDS | 286 | 0.4% |
 | TIMEOUT | 40,542 | 53.7% |
 
-**13,781 domains are mail-reachable today** (18.3%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**13,787 domains are mail-reachable today** (18.3%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -41,10 +41,10 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `route3.mx.cloudflare.net` | 483 | 492 | yes |
 | `mx4.beavis99.com` | 474 | 475 |  |
 | `mx4.beavis99.net` | 474 | 475 |  |
-| `generator.email` | 413 | 549 |  |
+| `generator.email` | 414 | 551 |  |
 | `tinyhost.shop` | 324 | 324 |  |
 | `mx.emlhub.com` | 276 | 276 |  |
-| `emailfake.com` | 247 | 285 |  |
+| `emailfake.com` | 251 | 288 |  |
 | `park-mx.above.com` | 246 | 250 | yes |
 | `aspmx.l.google.com` | 227 | 229 | yes |
 | `alt1.aspmx.l.google.com` | 223 | 225 | yes |
@@ -64,10 +64,10 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `mail.wallywatts.com` | 634 | 688 |
 | `mx4.beavis99.com` | 474 | 475 |
 | `mx4.beavis99.net` | 474 | 475 |
-| `generator.email` | 413 | 549 |
+| `generator.email` | 414 | 551 |
 | `tinyhost.shop` | 324 | 324 |
 | `mx.emlhub.com` | 276 | 276 |
-| `emailfake.com` | 247 | 285 |
+| `emailfake.com` | 251 | 288 |
 | `mx.spymail.one` | 211 | 211 |
 | `email.chatgpt.org.uk` | 197 | 197 |
 | `aero4.unstablemail.com` | 195 | 195 |
@@ -88,7 +88,7 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 |---|---|---|
 | `78.47.124.133` | 1040 | 1040 |
 | `94.130.108.80` | 1040 | 1040 |
-| `91.196.52.205` | 563 | 739 |
+| `91.196.52.205` | 569 | 744 |
 | `142.132.166.12` | 494 | 542 |
 | `188.166.111.252` | 494 | 542 |
 | `116.202.9.167` | 478 | 525 |
@@ -113,7 +113,7 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | Metric | Value |
 |---|---|
 | High-confidence disposable MX hosts (≥5 disposables, not shared) | 211 |
-| High-confidence disposable IPs | 424 |
+| High-confidence disposable IPs | 425 |
 | Promoted to `domains_inferred.txt` | 1 |
 
 
