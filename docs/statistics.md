@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-08-11 04:04 UTC**.*  
-*Last DNS snapshot: **2026-08-11T03:46:54+00:00**.*
+*Generated automatically. Last build: **2026-08-12 03:12 UTC**.*  
+*Last DNS snapshot: **2026-08-12T02:54:19+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 74,685 |
-| `domains_strict.txt` | 74,716 |
+| `domains.txt` (default) | 74,692 |
+| `domains_strict.txt` | 74,723 |
 | `domains_inferred.txt` (opt-in) | 0 |
 
 ## Reachability
 
-Of **75,499** resolved domains:
+Of **75,504** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 12,024 | 15.9% |
-| A_ONLY | 1,994 | 2.6% |
-| NXDOMAIN | 21,447 | 28.4% |
+| MX_OK | 12,026 | 15.9% |
+| A_ONLY | 1,995 | 2.6% |
+| NXDOMAIN | 21,448 | 28.4% |
 | NO_RECORDS | 293 | 0.4% |
-| TIMEOUT | 39,741 | 52.6% |
+| TIMEOUT | 39,742 | 52.6% |
 
-**14,018 domains are mail-reachable today** (18.6%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**14,021 domains are mail-reachable today** (18.6%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -36,15 +36,15 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 |---|---|---|---|
 | `mail.wabblywabble.com` | 656 | 711 |  |
 | `mail.wallywatts.com` | 656 | 711 |  |
-| `route2.mx.cloudflare.net` | 520 | 529 | yes |
-| `route1.mx.cloudflare.net` | 519 | 528 | yes |
-| `route3.mx.cloudflare.net` | 519 | 528 | yes |
+| `route2.mx.cloudflare.net` | 521 | 530 | yes |
+| `route1.mx.cloudflare.net` | 520 | 529 | yes |
+| `route3.mx.cloudflare.net` | 520 | 529 | yes |
 | `mx4.beavis99.com` | 509 | 510 |  |
 | `mx4.beavis99.net` | 509 | 510 |  |
-| `generator.email` | 419 | 553 |  |
-| `tinyhost.shop` | 307 | 307 |  |
+| `generator.email` | 425 | 556 |  |
+| `tinyhost.shop` | 306 | 306 |  |
 | `mx.emlhub.com` | 289 | 289 |  |
-| `emailfake.com` | 263 | 299 |  |
+| `emailfake.com` | 265 | 300 |  |
 | `park-mx.above.com` | 235 | 239 | yes |
 | `aspmx.l.google.com` | 224 | 226 | yes |
 | `alt1.aspmx.l.google.com` | 219 | 221 | yes |
@@ -53,7 +53,7 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `mx.spymail.one` | 215 | 215 |  |
 | `alt2.aspmx.l.google.com` | 214 | 216 | yes |
 | `mx.emlpro.com` | 194 | 194 |  |
-| `email.chatgpt.org.uk` | 181 | 181 |  |
+| `email.chatgpt.org.uk` | 178 | 178 |  |
 
 
 With shared infrastructure excluded (these are the *true* disposable mail backends):
@@ -64,15 +64,15 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `mail.wallywatts.com` | 656 | 711 |
 | `mx4.beavis99.com` | 509 | 510 |
 | `mx4.beavis99.net` | 509 | 510 |
-| `generator.email` | 419 | 553 |
-| `tinyhost.shop` | 307 | 307 |
+| `generator.email` | 425 | 556 |
+| `tinyhost.shop` | 306 | 306 |
 | `mx.emlhub.com` | 289 | 289 |
-| `emailfake.com` | 263 | 299 |
+| `emailfake.com` | 265 | 300 |
 | `aero4.unstablemail.com` | 217 | 217 |
 | `srv4.unstablemail.com` | 217 | 217 |
 | `mx.spymail.one` | 215 | 215 |
 | `mx.emlpro.com` | 194 | 194 |
-| `email.chatgpt.org.uk` | 181 | 181 |
+| `email.chatgpt.org.uk` | 178 | 178 |
 | `mx.emltmp.com` | 178 | 178 |
 | `mx.dropmail.me` | 174 | 174 |
 | `mail.casadorock.com` | 164 | 164 |
@@ -88,20 +88,20 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 |---|---|---|
 | `78.47.124.133` | 1107 | 1107 |
 | `94.130.108.80` | 1107 | 1107 |
-| `91.196.52.205` | 580 | 752 |
+| `91.196.52.205` | 590 | 756 |
 | `116.202.9.167` | 500 | 548 |
 | `46.101.111.206` | 500 | 548 |
 | `142.132.166.12` | 494 | 543 |
 | `188.166.111.252` | 494 | 543 |
-| `162.159.205.23` | 433 | 440 |
-| `162.159.205.24` | 433 | 440 |
-| `162.159.205.25` | 433 | 440 |
-| `162.159.205.17` | 418 | 426 |
-| `162.159.205.18` | 418 | 426 |
-| `162.159.205.19` | 418 | 426 |
-| `162.159.205.11` | 410 | 417 |
-| `162.159.205.12` | 410 | 417 |
-| `162.159.205.13` | 410 | 417 |
+| `162.159.205.23` | 434 | 441 |
+| `162.159.205.24` | 434 | 441 |
+| `162.159.205.25` | 434 | 441 |
+| `162.159.205.17` | 419 | 427 |
+| `162.159.205.18` | 419 | 427 |
+| `162.159.205.19` | 419 | 427 |
+| `162.159.205.11` | 411 | 418 |
+| `162.159.205.12` | 411 | 418 |
+| `162.159.205.13` | 411 | 418 |
 | `13.223.25.84` | 365 | 365 |
 | `54.243.117.197` | 365 | 365 |
 | `188.245.74.208` | 364 | 365 |
@@ -113,7 +113,7 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | Metric | Value |
 |---|---|
 | High-confidence disposable MX hosts (≥5 disposables, not shared) | 214 |
-| High-confidence disposable IPs | 434 |
+| High-confidence disposable IPs | 432 |
 | Promoted to `domains_inferred.txt` | 0 |
 
 
@@ -121,7 +121,7 @@ A candidate domain (sourced from Certificate Transparency logs) is promoted to `
 
 ## Possible upstream false positives (phase 3b)
 
-**1641 domains** in `domains.txt` resolve *only* to MX hosts on the shared-infra allowlist (Google Workspace, Microsoft 365, Cloudflare Email Routing, etc.). These may be legitimate businesses incorrectly listed upstream — or shell domains owned by disposable operators who happen to use mainstream mail. Review manually; this script does NOT auto-remove them.
+**1642 domains** in `domains.txt` resolve *only* to MX hosts on the shared-infra allowlist (Google Workspace, Microsoft 365, Cloudflare Email Routing, etc.). These may be legitimate businesses incorrectly listed upstream — or shell domains owned by disposable operators who happen to use mainstream mail. Review manually; this script does NOT auto-remove them.
 
 | Listed disposable | MX (shared infra) |
 |---|---|
@@ -157,7 +157,7 @@ A candidate domain (sourced from Certificate Transparency logs) is promoted to `
 | `1987.com` | `park-mx.above.com` |
 
 
-*… and 1,611 more. Full list available by querying the SQLite directly.*
+*… and 1,612 more. Full list available by querying the SQLite directly.*
 
 
 ---
