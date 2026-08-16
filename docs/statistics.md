@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-08-15 02:30 UTC**.*  
-*Last DNS snapshot: **2026-08-15T02:24:15+00:00**.*
+*Generated automatically. Last build: **2026-08-16 02:37 UTC**.*  
+*Last DNS snapshot: **2026-08-16T02:29:29+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 74,695 |
-| `domains_strict.txt` | 74,726 |
+| `domains.txt` (default) | 74,693 |
+| `domains_strict.txt` | 74,724 |
 | `domains_inferred.txt` (opt-in) | 0 |
 
 ## Reachability
 
-Of **75,529** resolved domains:
+Of **75,537** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 12,047 | 16.0% |
-| A_ONLY | 1,975 | 2.6% |
-| NXDOMAIN | 21,461 | 28.4% |
-| NO_RECORDS | 290 | 0.4% |
-| TIMEOUT | 39,756 | 52.6% |
+| MX_OK | 12,062 | 16.0% |
+| A_ONLY | 1,971 | 2.6% |
+| NXDOMAIN | 21,443 | 28.4% |
+| NO_RECORDS | 288 | 0.4% |
+| TIMEOUT | 39,773 | 52.7% |
 
-**14,022 domains are mail-reachable today** (18.6%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**14,033 domains are mail-reachable today** (18.6%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -34,25 +34,25 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 
 | MX host | Disposable domains | Total resolved | Shared infra |
 |---|---|---|---|
-| `mail.wabblywabble.com` | 656 | 711 |  |
-| `mail.wallywatts.com` | 656 | 711 |  |
-| `route2.mx.cloudflare.net` | 531 | 540 | yes |
-| `route1.mx.cloudflare.net` | 530 | 539 | yes |
-| `route3.mx.cloudflare.net` | 530 | 539 | yes |
-| `mx4.beavis99.com` | 509 | 510 |  |
-| `mx4.beavis99.net` | 509 | 510 |  |
-| `generator.email` | 426 | 561 |  |
+| `mail.wabblywabble.com` | 656 | 712 |  |
+| `mail.wallywatts.com` | 656 | 712 |  |
+| `route2.mx.cloudflare.net` | 528 | 537 | yes |
+| `route1.mx.cloudflare.net` | 527 | 536 | yes |
+| `route3.mx.cloudflare.net` | 527 | 536 | yes |
+| `mx4.beavis99.com` | 508 | 509 |  |
+| `mx4.beavis99.net` | 508 | 509 |  |
+| `generator.email` | 427 | 563 |  |
 | `tinyhost.shop` | 306 | 306 |  |
-| `mx.emlhub.com` | 289 | 289 |  |
-| `emailfake.com` | 267 | 304 |  |
-| `park-mx.above.com` | 236 | 240 | yes |
-| `aspmx.l.google.com` | 224 | 226 | yes |
-| `alt1.aspmx.l.google.com` | 219 | 221 | yes |
-| `aero4.unstablemail.com` | 218 | 218 |  |
-| `srv4.unstablemail.com` | 218 | 218 |  |
+| `mx.emlhub.com` | 291 | 291 |  |
+| `emailfake.com` | 265 | 302 |  |
+| `park-mx.above.com` | 237 | 241 | yes |
+| `aspmx.l.google.com` | 225 | 227 | yes |
+| `aero4.unstablemail.com` | 220 | 220 |  |
+| `alt1.aspmx.l.google.com` | 220 | 222 | yes |
+| `srv4.unstablemail.com` | 220 | 220 |  |
+| `alt2.aspmx.l.google.com` | 215 | 217 | yes |
 | `mx.spymail.one` | 215 | 215 |  |
-| `alt2.aspmx.l.google.com` | 214 | 216 | yes |
-| `mx.emlpro.com` | 194 | 194 |  |
+| `mx.emlpro.com` | 195 | 195 |  |
 | `mx.emltmp.com` | 178 | 178 |  |
 
 
@@ -60,22 +60,22 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 
 | MX host | Disposable domains | Total resolved |
 |---|---|---|
-| `mail.wabblywabble.com` | 656 | 711 |
-| `mail.wallywatts.com` | 656 | 711 |
-| `mx4.beavis99.com` | 509 | 510 |
-| `mx4.beavis99.net` | 509 | 510 |
-| `generator.email` | 426 | 561 |
+| `mail.wabblywabble.com` | 656 | 712 |
+| `mail.wallywatts.com` | 656 | 712 |
+| `mx4.beavis99.com` | 508 | 509 |
+| `mx4.beavis99.net` | 508 | 509 |
+| `generator.email` | 427 | 563 |
 | `tinyhost.shop` | 306 | 306 |
-| `mx.emlhub.com` | 289 | 289 |
-| `emailfake.com` | 267 | 304 |
-| `aero4.unstablemail.com` | 218 | 218 |
-| `srv4.unstablemail.com` | 218 | 218 |
+| `mx.emlhub.com` | 291 | 291 |
+| `emailfake.com` | 265 | 302 |
+| `aero4.unstablemail.com` | 220 | 220 |
+| `srv4.unstablemail.com` | 220 | 220 |
 | `mx.spymail.one` | 215 | 215 |
-| `mx.emlpro.com` | 194 | 194 |
+| `mx.emlpro.com` | 195 | 195 |
 | `mx.emltmp.com` | 178 | 178 |
 | `email.chatgpt.org.uk` | 176 | 176 |
 | `mx.dropmail.me` | 174 | 174 |
-| `mail.casadorock.com` | 164 | 164 |
+| `mail.casadorock.com` | 165 | 165 |
 | `mx.freeml.net` | 157 | 157 |
 | `email.gravityengine.cc` | 150 | 150 |
 | `mx37.m1bp.com` | 150 | 150 |
@@ -86,26 +86,26 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 
 | IP address | Disposable domains | Total resolved |
 |---|---|---|
-| `78.47.124.133` | 1108 | 1108 |
-| `94.130.108.80` | 1108 | 1108 |
-| `91.196.52.205` | 593 | 765 |
-| `116.202.9.167` | 500 | 548 |
-| `46.101.111.206` | 500 | 548 |
-| `142.132.166.12` | 494 | 543 |
-| `188.166.111.252` | 494 | 543 |
-| `162.159.205.23` | 445 | 452 |
-| `162.159.205.24` | 445 | 452 |
-| `162.159.205.25` | 445 | 452 |
-| `162.159.205.17` | 430 | 438 |
-| `162.159.205.18` | 430 | 438 |
-| `162.159.205.19` | 430 | 438 |
-| `162.159.205.11` | 422 | 429 |
-| `162.159.205.12` | 422 | 429 |
-| `162.159.205.13` | 422 | 429 |
+| `78.47.124.133` | 1106 | 1106 |
+| `94.130.108.80` | 1106 | 1106 |
+| `91.196.52.205` | 593 | 766 |
+| `116.202.9.167` | 501 | 550 |
+| `46.101.111.206` | 501 | 550 |
+| `142.132.166.12` | 495 | 545 |
+| `188.166.111.252` | 495 | 545 |
+| `162.159.205.23` | 442 | 449 |
+| `162.159.205.24` | 442 | 449 |
+| `162.159.205.25` | 442 | 449 |
+| `162.159.205.17` | 427 | 435 |
+| `162.159.205.18` | 427 | 435 |
+| `162.159.205.19` | 427 | 435 |
+| `162.159.205.11` | 419 | 426 |
+| `162.159.205.12` | 419 | 426 |
+| `162.159.205.13` | 419 | 426 |
 | `13.223.25.84` | 365 | 365 |
 | `54.243.117.197` | 365 | 365 |
-| `188.245.74.208` | 364 | 365 |
-| `195.201.18.63` | 332 | 333 |
+| `188.245.74.208` | 363 | 364 |
+| `195.201.18.63` | 331 | 332 |
 
 
 ## Inferred candidates pipeline
