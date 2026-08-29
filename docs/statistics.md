@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-08-28 05:00 UTC**.*  
-*Last DNS snapshot: **2026-08-28T04:43:57+00:00**.*
+*Generated automatically. Last build: **2026-08-29 02:28 UTC**.*  
+*Last DNS snapshot: **2026-08-29T02:12:49+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 74,896 |
-| `domains_strict.txt` | 74,927 |
+| `domains.txt` (default) | 74,910 |
+| `domains_strict.txt` | 74,941 |
 | `domains_inferred.txt` (opt-in) | 0 |
 
 ## Reachability
 
-Of **75,795** resolved domains:
+Of **75,813** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 13,293 | 17.5% |
+| MX_OK | 13,308 | 17.6% |
 | A_ONLY | 2,440 | 3.2% |
 | NXDOMAIN | 23,002 | 30.3% |
-| NO_RECORDS | 339 | 0.4% |
-| TIMEOUT | 36,721 | 48.4% |
+| NO_RECORDS | 341 | 0.4% |
+| TIMEOUT | 36,722 | 48.4% |
 
-**15,733 domains are mail-reachable today** (20.8%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**15,748 domains are mail-reachable today** (20.8%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -41,19 +41,19 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `route2.mx.cloudflare.net` | 501 | 511 | yes |
 | `route1.mx.cloudflare.net` | 500 | 510 | yes |
 | `route3.mx.cloudflare.net` | 500 | 510 | yes |
-| `generator.email` | 397 | 533 |  |
+| `generator.email` | 401 | 537 |  |
 | `email.gravityengine.cc` | 362 | 362 |  |
-| `email.chatgpt.org.uk` | 306 | 306 |  |
-| `park-mx.above.com` | 284 | 288 | yes |
+| `email.chatgpt.org.uk` | 311 | 311 |  |
+| `park-mx.above.com` | 283 | 288 | yes |
 | `mx.emlhub.com` | 258 | 258 |  |
 | `aero4.unstablemail.com` | 255 | 255 |  |
 | `srv4.unstablemail.com` | 255 | 255 |  |
-| `aspmx.l.google.com` | 242 | 244 | yes |
-| `alt1.aspmx.l.google.com` | 239 | 241 | yes |
-| `alt2.aspmx.l.google.com` | 237 | 239 | yes |
-| `emailfake.com` | 236 | 273 |  |
+| `aspmx.l.google.com` | 243 | 245 | yes |
+| `alt1.aspmx.l.google.com` | 240 | 242 | yes |
+| `alt2.aspmx.l.google.com` | 238 | 240 | yes |
+| `emailfake.com` | 237 | 274 |  |
 | `mx.spymail.one` | 220 | 220 |  |
-| `tinyhost.shop` | 217 | 217 |  |
+| `tinyhost.shop` | 218 | 218 |  |
 
 
 With shared infrastructure excluded (these are the *true* disposable mail backends):
@@ -64,15 +64,15 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `mail.wallywatts.com` | 739 | 798 |
 | `mx4.beavis99.com` | 612 | 613 |
 | `mx4.beavis99.net` | 612 | 613 |
-| `generator.email` | 397 | 533 |
+| `generator.email` | 401 | 537 |
 | `email.gravityengine.cc` | 362 | 362 |
-| `email.chatgpt.org.uk` | 306 | 306 |
+| `email.chatgpt.org.uk` | 311 | 311 |
 | `mx.emlhub.com` | 258 | 258 |
 | `aero4.unstablemail.com` | 255 | 255 |
 | `srv4.unstablemail.com` | 255 | 255 |
-| `emailfake.com` | 236 | 273 |
+| `emailfake.com` | 237 | 274 |
 | `mx.spymail.one` | 220 | 220 |
-| `tinyhost.shop` | 217 | 217 |
+| `tinyhost.shop` | 218 | 218 |
 | `mx.emltmp.com` | 192 | 192 |
 | `mx.emlpro.com` | 187 | 187 |
 | `mx.freeml.net` | 163 | 163 |
@@ -88,12 +88,12 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 |---|---|---|
 | `78.47.124.133` | 1111 | 1111 |
 | `94.130.108.80` | 1111 | 1111 |
-| `138.226.240.26` | 645 | 645 |
+| `138.226.240.26` | 651 | 651 |
 | `142.132.166.12` | 620 | 671 |
 | `188.166.111.252` | 620 | 671 |
 | `116.202.9.167` | 618 | 668 |
 | `46.101.111.206` | 618 | 668 |
-| `91.196.52.205` | 533 | 706 |
+| `91.196.52.205` | 538 | 711 |
 | `188.245.74.208` | 486 | 487 |
 | `13.223.25.84` | 485 | 485 |
 | `54.243.117.197` | 485 | 485 |
