@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-09-12 02:34 UTC**.*  
-*Last DNS snapshot: **2026-09-12T02:24:14+00:00**.*
+*Generated automatically. Last build: **2026-09-13 02:20 UTC**.*  
+*Last DNS snapshot: **2026-09-13T02:14:32+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -16,17 +16,17 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 ## Reachability
 
-Of **76,274** resolved domains:
+Of **76,283** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 22,508 | 29.5% |
+| MX_OK | 22,517 | 29.5% |
 | A_ONLY | 5,140 | 6.7% |
 | NXDOMAIN | 39,572 | 51.9% |
 | NO_RECORDS | 762 | 1.0% |
 | TIMEOUT | 8,292 | 10.9% |
 
-**27,648 domains are mail-reachable today** (36.2%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**27,657 domains are mail-reachable today** (36.3%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -46,11 +46,11 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 | `aero4.unstablemail.com` | 448 | 448 |  |
 | `srv4.unstablemail.com` | 448 | 448 |  |
 | `mx.emlhub.com` | 440 | 440 |  |
-| `emailfake.com` | 429 | 466 |  |
+| `emailfake.com` | 430 | 467 |  |
 | `aspmx.l.google.com` | 420 | 422 | yes |
 | `alt1.aspmx.l.google.com` | 412 | 414 | yes |
+| `email.chatgpt.org.uk` | 412 | 412 |  |
 | `alt2.aspmx.l.google.com` | 408 | 410 | yes |
-| `email.chatgpt.org.uk` | 405 | 405 |  |
 | `email.gravityengine.cc` | 369 | 369 |  |
 | `mx.spymail.one` | 354 | 354 |  |
 | `mx.emltmp.com` | 349 | 349 |  |
@@ -68,8 +68,8 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `aero4.unstablemail.com` | 448 | 448 |
 | `srv4.unstablemail.com` | 448 | 448 |
 | `mx.emlhub.com` | 440 | 440 |
-| `emailfake.com` | 429 | 466 |
-| `email.chatgpt.org.uk` | 405 | 405 |
+| `emailfake.com` | 430 | 467 |
+| `email.chatgpt.org.uk` | 412 | 412 |
 | `email.gravityengine.cc` | 369 | 369 |
 | `mx.spymail.one` | 354 | 354 |
 | `mx.emltmp.com` | 349 | 349 |
@@ -92,7 +92,7 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 | `46.101.111.206` | 1227 | 1287 |
 | `142.132.166.12` | 1224 | 1285 |
 | `188.166.111.252` | 1224 | 1285 |
-| `91.196.52.205` | 1194 | 1368 |
+| `91.196.52.205` | 1195 | 1369 |
 | `188.245.74.208` | 1076 | 1077 |
 | `195.201.18.63` | 1061 | 1062 |
 | `13.223.25.84` | 1035 | 1035 |
