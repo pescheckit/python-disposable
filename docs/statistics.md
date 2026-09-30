@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-09-29 02:22 UTC**.*  
-*Last DNS snapshot: **2026-09-29T02:17:52+00:00**.*
+*Generated automatically. Last build: **2026-09-30 02:33 UTC**.*  
+*Last DNS snapshot: **2026-09-30T02:27:10+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 75,600 |
-| `domains_strict.txt` | 75,631 |
+| `domains.txt` (default) | 78,045 |
+| `domains_strict.txt` | 78,082 |
 | `domains_inferred.txt` (opt-in) | 2 |
 
 ## Reachability
 
-Of **76,690** resolved domains:
+Of **79,089** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 21,544 | 28.1% |
-| A_ONLY | 4,939 | 6.4% |
-| NXDOMAIN | 38,135 | 49.7% |
-| NO_RECORDS | 688 | 0.9% |
-| TIMEOUT | 11,384 | 14.8% |
+| MX_OK | 22,269 | 28.2% |
+| A_ONLY | 4,965 | 6.3% |
+| NXDOMAIN | 38,347 | 48.5% |
+| NO_RECORDS | 807 | 1.0% |
+| TIMEOUT | 12,701 | 16.1% |
 
-**26,483 domains are mail-reachable today** (34.5%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**27,234 domains are mail-reachable today** (34.4%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -34,51 +34,51 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 
 | MX host | Disposable domains | Total resolved | Shared infra |
 |---|---|---|---|
-| `mail.wabblywabble.com` | 1192 | 1271 |  |
-| `mail.wallywatts.com` | 1192 | 1271 |  |
-| `mx4.beavis99.com` | 1070 | 1071 |  |
-| `mx4.beavis99.net` | 1070 | 1071 |  |
-| `route1.mx.cloudflare.net` | 897 | 910 | yes |
-| `route2.mx.cloudflare.net` | 897 | 910 | yes |
-| `route3.mx.cloudflare.net` | 895 | 908 | yes |
-| `generator.email` | 606 | 737 |  |
-| `email.chatgpt.org.uk` | 505 | 505 |  |
+| `mail.wabblywabble.com` | 1199 | 1278 |  |
+| `mail.wallywatts.com` | 1199 | 1278 |  |
+| `mx4.beavis99.com` | 1069 | 1070 |  |
+| `mx4.beavis99.net` | 1069 | 1070 |  |
+| `route1.mx.cloudflare.net` | 901 | 914 | yes |
+| `route2.mx.cloudflare.net` | 901 | 914 | yes |
+| `route3.mx.cloudflare.net` | 899 | 912 | yes |
+| `generator.email` | 656 | 762 |  |
+| `email.chatgpt.org.uk` | 518 | 518 |  |
 | `park-mx.above.com` | 466 | 471 | yes |
-| `mx.emlhub.com` | 437 | 437 |  |
+| `aero4.unstablemail.com` | 452 | 452 |  |
+| `srv4.unstablemail.com` | 452 | 452 |  |
+| `emailfake.com` | 451 | 476 |  |
+| `mx.emlhub.com` | 439 | 439 |  |
 | `aspmx.l.google.com` | 420 | 423 | yes |
-| `aero4.unstablemail.com` | 417 | 417 |  |
-| `srv4.unstablemail.com` | 417 | 417 |  |
-| `alt1.aspmx.l.google.com` | 409 | 412 | yes |
-| `alt2.aspmx.l.google.com` | 407 | 410 | yes |
-| `emailfake.com` | 395 | 430 |  |
-| `email.gravityengine.cc` | 354 | 354 |  |
-| `mx.spymail.one` | 353 | 353 |  |
-| `mx.emltmp.com` | 342 | 342 |  |
+| `alt1.aspmx.l.google.com` | 408 | 411 | yes |
+| `alt2.aspmx.l.google.com` | 406 | 409 | yes |
+| `email.gravityengine.cc` | 361 | 361 |  |
+| `mx.spymail.one` | 351 | 351 |  |
+| `mx.emltmp.com` | 341 | 341 |  |
 
 
 With shared infrastructure excluded (these are the *true* disposable mail backends):
 
 | MX host | Disposable domains | Total resolved |
 |---|---|---|
-| `mail.wabblywabble.com` | 1192 | 1271 |
-| `mail.wallywatts.com` | 1192 | 1271 |
-| `mx4.beavis99.com` | 1070 | 1071 |
-| `mx4.beavis99.net` | 1070 | 1071 |
-| `generator.email` | 606 | 737 |
-| `email.chatgpt.org.uk` | 505 | 505 |
-| `mx.emlhub.com` | 437 | 437 |
-| `aero4.unstablemail.com` | 417 | 417 |
-| `srv4.unstablemail.com` | 417 | 417 |
-| `emailfake.com` | 395 | 430 |
-| `email.gravityengine.cc` | 354 | 354 |
-| `mx.spymail.one` | 353 | 353 |
-| `mx.emltmp.com` | 342 | 342 |
+| `mail.wabblywabble.com` | 1199 | 1278 |
+| `mail.wallywatts.com` | 1199 | 1278 |
+| `mx4.beavis99.com` | 1069 | 1070 |
+| `mx4.beavis99.net` | 1069 | 1070 |
+| `generator.email` | 656 | 762 |
+| `email.chatgpt.org.uk` | 518 | 518 |
+| `aero4.unstablemail.com` | 452 | 452 |
+| `srv4.unstablemail.com` | 452 | 452 |
+| `emailfake.com` | 451 | 476 |
+| `mx.emlhub.com` | 439 | 439 |
+| `email.gravityengine.cc` | 361 | 361 |
+| `mx.spymail.one` | 351 | 351 |
+| `mx.emltmp.com` | 341 | 341 |
+| `tinyhost.shop` | 339 | 339 |
 | `mx.emlpro.com` | 324 | 324 |
-| `tinyhost.shop` | 313 | 313 |
-| `mx.dropmail.me` | 298 | 298 |
+| `mx.dropmail.me` | 295 | 295 |
 | `mx.freeml.net` | 291 | 291 |
-| `mx37.m1bp.com` | 218 | 218 |
-| `mx37.mb5p.com` | 218 | 218 |
+| `mx37.m1bp.com` | 238 | 238 |
+| `mx37.mb5p.com` | 238 | 238 |
 | `mx.yomail.info` | 215 | 215 |
 
 
@@ -86,34 +86,34 @@ With shared infrastructure excluded (these are the *true* disposable mail backen
 
 | IP address | Disposable domains | Total resolved |
 |---|---|---|
-| `78.47.124.133` | 2346 | 2346 |
-| `94.130.108.80` | 2346 | 2346 |
-| `116.202.9.167` | 1163 | 1233 |
-| `46.101.111.206` | 1163 | 1233 |
-| `142.132.166.12` | 1158 | 1229 |
-| `188.166.111.252` | 1158 | 1229 |
-| `91.196.52.205` | 1050 | 1216 |
-| `188.245.74.208` | 1043 | 1044 |
-| `195.201.18.63` | 1035 | 1036 |
-| `13.223.25.84` | 993 | 995 |
-| `54.243.117.197` | 993 | 995 |
-| `162.159.205.23` | 895 | 906 |
-| `162.159.205.24` | 895 | 906 |
-| `162.159.205.25` | 895 | 906 |
-| `162.159.205.17` | 885 | 897 |
-| `162.159.205.18` | 885 | 897 |
-| `162.159.205.19` | 885 | 897 |
-| `162.159.205.11` | 872 | 883 |
-| `162.159.205.12` | 872 | 883 |
-| `162.159.205.13` | 872 | 883 |
+| `78.47.124.133` | 2584 | 2584 |
+| `94.130.108.80` | 2584 | 2584 |
+| `116.202.9.167` | 1169 | 1239 |
+| `46.101.111.206` | 1169 | 1239 |
+| `142.132.166.12` | 1163 | 1234 |
+| `188.166.111.252` | 1163 | 1234 |
+| `91.196.52.205` | 1136 | 1269 |
+| `188.245.74.208` | 1042 | 1043 |
+| `195.201.18.63` | 1033 | 1034 |
+| `13.223.25.84` | 994 | 996 |
+| `54.243.117.197` | 994 | 996 |
+| `162.159.205.23` | 899 | 910 |
+| `162.159.205.24` | 899 | 910 |
+| `162.159.205.25` | 899 | 910 |
+| `162.159.205.17` | 890 | 902 |
+| `162.159.205.18` | 890 | 902 |
+| `162.159.205.19` | 890 | 902 |
+| `162.159.205.11` | 877 | 888 |
+| `162.159.205.12` | 877 | 888 |
+| `162.159.205.13` | 877 | 888 |
 
 
 ## Inferred candidates pipeline
 
 | Metric | Value |
 |---|---|
-| High-confidence disposable MX hosts (≥5 disposables, not shared) | 301 |
-| High-confidence disposable IPs | 799 |
+| High-confidence disposable MX hosts (≥5 disposables, not shared) | 306 |
+| High-confidence disposable IPs | 801 |
 | Promoted to `domains_inferred.txt` | 2 |
 
 
@@ -121,7 +121,7 @@ A candidate domain (sourced from Certificate Transparency logs) is promoted to `
 
 ## Possible upstream false positives (phase 3b)
 
-**3073 domains** in `domains.txt` resolve *only* to MX hosts on the shared-infra allowlist (Google Workspace, Microsoft 365, Cloudflare Email Routing, etc.). These may be legitimate businesses incorrectly listed upstream — or shell domains owned by disposable operators who happen to use mainstream mail. Review manually; this script does NOT auto-remove them.
+**3079 domains** in `domains.txt` resolve *only* to MX hosts on the shared-infra allowlist (Google Workspace, Microsoft 365, Cloudflare Email Routing, etc.). These may be legitimate businesses incorrectly listed upstream — or shell domains owned by disposable operators who happen to use mainstream mail. Review manually; this script does NOT auto-remove them.
 
 | Listed disposable | MX (shared infra) |
 |---|---|
@@ -157,7 +157,7 @@ A candidate domain (sourced from Certificate Transparency logs) is promoted to `
 | `1c-spec.ru` | `mx.yandex.ru` |
 
 
-*… and 3,043 more. Full list available by querying the SQLite directly.*
+*… and 3,049 more. Full list available by querying the SQLite directly.*
 
 
 ---
