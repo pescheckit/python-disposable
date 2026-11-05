@@ -1,7 +1,7 @@
 # Disposable Email Infrastructure — Statistics
 
-*Generated automatically. Last build: **2026-11-04 02:34 UTC**.*  
-*Last DNS snapshot: **2026-11-04T02:27:22+00:00**.*
+*Generated automatically. Last build: **2026-11-05 03:12 UTC**.*  
+*Last DNS snapshot: **2026-11-05T02:51:35+00:00**.*
 
 This document is regenerated nightly from the bundled [`resolution.sqlite`](../disposable_email/data/) snapshot.
 It captures the live mail infrastructure of the disposable email domains shipped with this package.
@@ -10,23 +10,23 @@ It captures the live mail infrastructure of the disposable email domains shipped
 
 | List | Domains |
 |---|---|
-| `domains.txt` (default) | 98,829 |
-| `domains_strict.txt` | 100,061 |
+| `domains.txt` (default) | 98,860 |
+| `domains_strict.txt` | 100,092 |
 | `domains_inferred.txt` (opt-in) | 4 |
 
 ## Reachability
 
-Of **103,479** resolved domains:
+Of **103,645** resolved domains:
 
 | Status | Count | % of resolved |
 |---|---|---|
-| MX_OK | 37,530 | 36.3% |
-| A_ONLY | 3,459 | 3.3% |
-| NXDOMAIN | 26,714 | 25.8% |
-| NO_RECORDS | 704 | 0.7% |
-| TIMEOUT | 35,072 | 33.9% |
+| MX_OK | 36,747 | 35.5% |
+| A_ONLY | 3,240 | 3.1% |
+| NXDOMAIN | 25,024 | 24.1% |
+| NO_RECORDS | 659 | 0.6% |
+| TIMEOUT | 37,975 | 36.6% |
 
-**40,989 domains are mail-reachable today** (39.6%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
+**39,987 domains are mail-reachable today** (38.6%). The remainder are historical: domains that no longer resolve (NXDOMAIN) but are kept on the list because disposable operators frequently re-register such names.
 
 ## Top disposable mail backends (MX hosts)
 
@@ -34,86 +34,86 @@ Including shared infrastructure (Cloudflare/Google/etc.):
 
 | MX host | Disposable domains | Total resolved | Shared infra |
 |---|---|---|---|
-| `route1.mx.cloudflare.net` | 2341 | 2517 | yes |
-| `route2.mx.cloudflare.net` | 2341 | 2517 | yes |
-| `route3.mx.cloudflare.net` | 2340 | 2516 | yes |
-| `mail.wabblywabble.com` | 1433 | 1435 |  |
-| `mail.wallywatts.com` | 1433 | 1435 |  |
-| `generator.email` | 1334 | 1563 |  |
-| `aero4.unstablemail.com` | 1123 | 1124 |  |
-| `srv4.unstablemail.com` | 1123 | 1124 |  |
-| `park-mx.above.com` | 940 | 1034 | yes |
-| `mx4.beavis99.com` | 860 | 860 |  |
-| `mx4.beavis99.net` | 859 | 859 |  |
-| `aspmx.l.google.com` | 787 | 872 | yes |
-| `alt1.aspmx.l.google.com` | 773 | 856 | yes |
-| `alt2.aspmx.l.google.com` | 769 | 850 | yes |
-| `smtp.google.com` | 765 | 794 | yes |
-| `eforward1.registrar-servers.com` | 753 | 791 | yes |
-| `eforward2.registrar-servers.com` | 753 | 791 | yes |
-| `eforward3.registrar-servers.com` | 753 | 791 | yes |
-| `eforward4.registrar-servers.com` | 753 | 791 | yes |
-| `eforward5.registrar-servers.com` | 753 | 791 | yes |
+| `route2.mx.cloudflare.net` | 2314 | 2493 | yes |
+| `route1.mx.cloudflare.net` | 2313 | 2492 | yes |
+| `route3.mx.cloudflare.net` | 2313 | 2492 | yes |
+| `mail.wabblywabble.com` | 1369 | 1369 |  |
+| `mail.wallywatts.com` | 1369 | 1369 |  |
+| `generator.email` | 1338 | 1572 |  |
+| `aero4.unstablemail.com` | 1101 | 1103 |  |
+| `srv4.unstablemail.com` | 1101 | 1103 |  |
+| `park-mx.above.com` | 918 | 1019 | yes |
+| `aspmx.l.google.com` | 794 | 880 | yes |
+| `alt1.aspmx.l.google.com` | 782 | 866 | yes |
+| `alt2.aspmx.l.google.com` | 780 | 862 | yes |
+| `mx4.beavis99.com` | 780 | 780 |  |
+| `mx4.beavis99.net` | 779 | 779 |  |
+| `smtp.google.com` | 761 | 790 | yes |
+| `eforward1.registrar-servers.com` | 744 | 782 | yes |
+| `eforward2.registrar-servers.com` | 744 | 782 | yes |
+| `eforward3.registrar-servers.com` | 744 | 782 | yes |
+| `eforward4.registrar-servers.com` | 744 | 782 | yes |
+| `eforward5.registrar-servers.com` | 744 | 782 | yes |
 
 
 With shared infrastructure excluded (these are the *true* disposable mail backends):
 
 | MX host | Disposable domains | Total resolved |
 |---|---|---|
-| `mail.wabblywabble.com` | 1433 | 1435 |
-| `mail.wallywatts.com` | 1433 | 1435 |
-| `generator.email` | 1334 | 1563 |
-| `aero4.unstablemail.com` | 1123 | 1124 |
-| `srv4.unstablemail.com` | 1123 | 1124 |
-| `mx4.beavis99.com` | 860 | 860 |
-| `mx4.beavis99.net` | 859 | 859 |
-| `emailfake.com` | 583 | 597 |
-| `email.chatgpt.org.uk` | 562 | 566 |
-| `smtp.yopmail.com` | 512 | 520 |
-| `tinyhost.shop` | 335 | 335 |
-| `mx2.timeweb.ru` | 324 | 354 |
-| `mx1.timeweb.ru` | 323 | 353 |
-| `mx.emlhub.com` | 322 | 322 |
-| `mx2-hosting.jellyfish.systems` | 315 | 326 |
-| `mx3-hosting.jellyfish.systems` | 315 | 326 |
-| `mx1-hosting.jellyfish.systems` | 314 | 325 |
-| `void.blackhole.mx` | 289 | 290 |
-| `mail.h-email.net` | 275 | 341 |
-| `mx1.titan.email` | 275 | 277 |
+| `mail.wabblywabble.com` | 1369 | 1369 |
+| `mail.wallywatts.com` | 1369 | 1369 |
+| `generator.email` | 1338 | 1572 |
+| `aero4.unstablemail.com` | 1101 | 1103 |
+| `srv4.unstablemail.com` | 1101 | 1103 |
+| `mx4.beavis99.com` | 780 | 780 |
+| `mx4.beavis99.net` | 779 | 779 |
+| `emailfake.com` | 571 | 584 |
+| `email.chatgpt.org.uk` | 559 | 570 |
+| `smtp.yopmail.com` | 507 | 515 |
+| `tinyhost.shop` | 326 | 326 |
+| `mx2.timeweb.ru` | 325 | 355 |
+| `mx1.timeweb.ru` | 324 | 354 |
+| `mx.emlhub.com` | 308 | 308 |
+| `mx2-hosting.jellyfish.systems` | 308 | 319 |
+| `mx3-hosting.jellyfish.systems` | 308 | 319 |
+| `mx1-hosting.jellyfish.systems` | 307 | 318 |
+| `void.blackhole.mx` | 291 | 293 |
+| `mx1.titan.email` | 274 | 276 |
+| `mx2.titan.email` | 271 | 273 |
 
 
 ## Top mail IPs by disposable domain count
 
 | IP address | Disposable domains | Total resolved |
 |---|---|---|
-| `162.159.205.23` | 2278 | 2451 |
-| `162.159.205.24` | 2278 | 2451 |
-| `162.159.205.25` | 2278 | 2451 |
-| `162.159.205.17` | 2273 | 2445 |
-| `162.159.205.18` | 2273 | 2445 |
-| `162.159.205.19` | 2273 | 2445 |
-| `162.159.205.11` | 2250 | 2422 |
-| `162.159.205.12` | 2250 | 2422 |
-| `162.159.205.13` | 2250 | 2422 |
-| `91.196.52.205` | 2057 | 2294 |
-| `78.47.124.133` | 1827 | 1827 |
-| `94.130.108.80` | 1827 | 1827 |
-| `116.202.9.167` | 1310 | 1312 |
-| `46.101.111.206` | 1310 | 1312 |
-| `142.132.166.12` | 1308 | 1310 |
-| `188.166.111.252` | 1308 | 1310 |
-| `195.123.189.142` | 1161 | 1223 |
-| `146.190.212.90` | 1072 | 1073 |
-| `146.190.223.124` | 1066 | 1067 |
-| `103.224.212.34` | 865 | 957 |
+| `162.159.205.23` | 2237 | 2413 |
+| `162.159.205.24` | 2237 | 2413 |
+| `162.159.205.25` | 2237 | 2413 |
+| `162.159.205.17` | 2236 | 2411 |
+| `162.159.205.18` | 2236 | 2411 |
+| `162.159.205.19` | 2236 | 2411 |
+| `162.159.205.11` | 2210 | 2385 |
+| `162.159.205.12` | 2210 | 2385 |
+| `162.159.205.13` | 2210 | 2385 |
+| `91.196.52.205` | 2035 | 2274 |
+| `78.47.124.133` | 1737 | 1737 |
+| `94.130.108.80` | 1737 | 1737 |
+| `116.202.9.167` | 1251 | 1251 |
+| `46.101.111.206` | 1251 | 1251 |
+| `142.132.166.12` | 1234 | 1234 |
+| `188.166.111.252` | 1234 | 1234 |
+| `195.123.189.142` | 1163 | 1223 |
+| `146.190.212.90` | 1059 | 1061 |
+| `146.190.223.124` | 1046 | 1048 |
+| `103.224.212.34` | 848 | 947 |
 
 
 ## Inferred candidates pipeline
 
 | Metric | Value |
 |---|---|
-| High-confidence disposable MX hosts (≥5 disposables, not shared) | 417 |
-| High-confidence disposable IPs | 1,015 |
+| High-confidence disposable MX hosts (≥5 disposables, not shared) | 400 |
+| High-confidence disposable IPs | 985 |
 | Promoted to `domains_inferred.txt` | 4 |
 
 
@@ -121,7 +121,7 @@ A candidate domain (sourced from Certificate Transparency logs) is promoted to `
 
 ## Possible upstream false positives (phase 3b)
 
-**7299 domains** in `domains.txt` resolve *only* to MX hosts on the shared-infra allowlist (Google Workspace, Microsoft 365, Cloudflare Email Routing, etc.). These may be legitimate businesses incorrectly listed upstream — or shell domains owned by disposable operators who happen to use mainstream mail. Review manually; this script does NOT auto-remove them.
+**7208 domains** in `domains.txt` resolve *only* to MX hosts on the shared-infra allowlist (Google Workspace, Microsoft 365, Cloudflare Email Routing, etc.). These may be legitimate businesses incorrectly listed upstream — or shell domains owned by disposable operators who happen to use mainstream mail. Review manually; this script does NOT auto-remove them.
 
 | Listed disposable | MX (shared infra) |
 |---|---|
@@ -151,13 +151,13 @@ A candidate domain (sourced from Certificate Transparency logs) is promoted to `
 | `041998.xyz` | `mx1.alias.proton.me` |
 | `0500betvip.com` | `route1.mx.cloudflare.net` |
 | `057gmail.com` | `route1.mx.cloudflare.net` |
-| `099833.xyz` | `park-mx.above.com` |
 | `0ak.org` | `mx00.ionos.com` |
 | `0hcow.com` | `mxa.mailgun.org` |
 | `0hio.net` | `aspmx1.migadu.com` |
+| `0nce.net` | `route1.mx.cloudflare.net` |
 
 
-*… and 7,269 more. Full list available by querying the SQLite directly.*
+*… and 7,178 more. Full list available by querying the SQLite directly.*
 
 
 ---
